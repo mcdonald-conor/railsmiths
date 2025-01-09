@@ -22,8 +22,8 @@ title: Railsmiths
 email: cm@mcdonaldconor.com
 description: >- # this means to ignore newlines until "baseurl:"
   Get your
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/railsmiths" # the subpath of your site, e.g. /blog
+url: "https://mcdonald-conor.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mcdonaldconor
 github_username:  mcdonald-conor
 
