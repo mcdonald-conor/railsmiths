@@ -1,0 +1,47 @@
+<div class="animate-fade-in text-center">
+  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-900/30 mb-4">
+    <svg class="w-8 h-8 text-green-400 animate-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    </svg>
+  </div>
+  <h3 class="text-2xl font-bold text-white mb-4">You're on the list! 🎉</h3>
+  <p class="text-lg text-gray-300 mb-8">
+    Thanks for signing up! We've sent you a confirmation email.<br>
+    You'll be among the first to know when Railsmiths Mobile launches.
+  </p>
+  <div class="flex justify-center space-x-4">
+    <%= link_to "Back to Home", root_path,
+        class: "px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200" %>
+  </div>
+</div>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-success {
+    animation: checkmark 0.8s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes checkmark {
+    0% {
+      stroke-dashoffset: 24;
+      opacity: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  .animate-success path {
+    stroke-dasharray: 24;
+    stroke-dashoffset: 24;
+  }
+</style>

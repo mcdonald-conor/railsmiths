@@ -24,13 +24,15 @@
 
         <!-- Signup Form -->
         <div class="max-w-md mx-auto mb-12">
+          <div id="form_response"></div>
           <%= form_with model: @signup,
               class: "space-y-4",
+              local: false,
               data: {
                 controller: "signup confetti",
                 action: "turbo:submit-end->confetti#fire"
               } do |f| %>
-            <div id="signup-form" class="flex flex-col sm:flex-row gap-3">
+            <div class="flex flex-col sm:flex-row gap-3">
               <div class="flex-1">
                 <%= f.email_field :email,
                     class: "w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent",
@@ -39,16 +41,11 @@
               </div>
               <%= f.submit "Join the Waitlist",
                   class: "w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200",
-                  data: { confetti_target: "button" } %>
+                  data: {
+                    confetti_target: "button",
+                    disable_with: "Signing up..."
+                  } %>
             </div>
-
-            <%= turbo_frame_tag "flash" do %>
-              <% if flash[:notice] %>
-                <div class="mt-3 text-sm text-green-400 animate-fade-in"><%= flash[:notice] %></div>
-              <% elsif flash[:alert] %>
-                <div class="mt-3 text-sm text-red-400 animate-fade-in"><%= flash[:alert] %></div>
-              <% end %>
-            <% end %>
           <% end %>
         </div>
 
