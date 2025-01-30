@@ -1,0 +1,20 @@
+<%= turbo_stream.update "signup-form" do %>
+  <div class="flex gap-2">
+    <%= form_with model: @signup do |f| %>
+      <%= f.email_field :email,
+          class: "flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent",
+          placeholder: "Enter your email",
+          required: true %>
+      <%= f.submit "Get Early Access",
+          class: "px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors" %>
+    <% end %>
+  </div>
+
+  <%= turbo_frame_tag "flash" do %>
+    <% if flash[:notice] %>
+      <div class="mt-2 text-sm text-green-400"><%= flash[:notice] %></div>
+    <% elsif flash[:alert] %>
+      <div class="mt-2 text-sm text-red-400"><%= flash[:alert] %></div>
+    <% end %>
+  <% end %>
+<% end %>

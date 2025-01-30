@@ -1,0 +1,19 @@
+current directory: /Users/mcdonaldconor/code/mcdonald-conor/railsmiths_landing/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/mcdonaldconor/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/mcdonaldconor/code/mcdonald-conor/railsmiths_landing/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250130-15243-o5iu6f sitelibdir\=./.gem.20250130-15243-o5iu6f clean
+
+current directory: /Users/mcdonaldconor/code/mcdonald-conor/railsmiths_landing/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250130-15243-o5iu6f sitelibdir\=./.gem.20250130-15243-o5iu6f
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/mcdonaldconor/code/mcdonald-conor/railsmiths_landing/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250130-15243-o5iu6f sitelibdir\=./.gem.20250130-15243-o5iu6f install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250130-15243-o5iu6f/racc
+
+current directory: /Users/mcdonaldconor/code/mcdonald-conor/railsmiths_landing/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250130-15243-o5iu6f sitelibdir\=./.gem.20250130-15243-o5iu6f clean
