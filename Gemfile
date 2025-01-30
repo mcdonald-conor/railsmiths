@@ -76,7 +76,7 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-gem "resend", "~> 0.8.1"
+gem "resend", "~> 0.18.0"
 
 # Add these gems for production
 group :production do
