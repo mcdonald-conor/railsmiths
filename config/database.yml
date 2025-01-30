@@ -33,3 +33,4 @@ production:
   database: railsmiths_production
   username: railsmiths
   password: <%= ENV['DATABASE_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
